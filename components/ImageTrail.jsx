@@ -1056,23 +1056,38 @@ const variantMap = {
   8: ImageTrailVariant8
 };
 
-export default function ImageTrail({ items = [], variant = 1 }) {
+/**
+ * @typedef {Object} ImageTrailProps
+ * @property {string[]=} items
+ * @property {number=} variant
+ * @property {import("react").ReactNode=} children
+ */
+
+/**
+ * @param {ImageTrailProps} props
+ */
+export default function ImageTrail(props) {
+  const { items, variant, children } = props;
+  /** @type {string[]} */
+  const safeItems = items ?? [];
+  const safeVariant = variant ?? 1;
   const containerRef = useRef(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const Cls = variantMap[variant] || variantMap[1];
+    const Cls = variantMap[safeVariant] || variantMap[1];
     new Cls(containerRef.current);
-  }, [variant, items]);
+  }, [safeVariant, safeItems]);
 
   return (
     <div className="content" ref={containerRef}>
-      {items.map((url, i) => (
+      {safeItems.map((url, i) => (
         <div className="content__img" key={i}>
           <div className="content__img-inner" style={{ backgroundImage: `url(${url})` }} />
         </div>
       ))}
+      {children}
     </div>
   );
 }
