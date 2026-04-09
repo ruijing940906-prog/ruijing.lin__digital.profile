@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import TextType from "@/components/TextType";
 
 import ImageTrail from "@/components/ImageTrail"
 
@@ -22,16 +23,26 @@ const lifelogImages = [
   "/lifelog/IMG_6171.JPG",
   "/lifelog/IMG_6621.JPG",
   "/lifelog/IMG_7659.JPG",
+  "/lifelog/111.JPG",
+  "/lifelog/222.JPG",
+  "/lifelog/333.JPG",
+  "/lifelog/444.JPG",
+  "/lifelog/555.JPG",
+  "/lifelog/666.JPG",
+  "/lifelog/777.JPG",
+  "/lifelog/888.JPG",
+  "/lifelog/999.JPG",
+  
 ];
 
 
 export default function lifelog() {
   return (
+    
     <div className="relative w-full h-screen overflow-hidden bg-[#FFFEEE]">
       <ImageTrail 
         items={lifelogImages}
-        variant={1}
-      >
+        variant={1} >
       {/* <div className="flex flex-col items-center justify-center py-12 shrink-0 pt-20 pb-32">
         <h1 className="text-2xl font-extrabold text-[#EAD4AD] pointer-events-none mb-2">
         一些我的生活 — 我，我喜歡的，我經歷的，構成我的
@@ -39,10 +50,23 @@ export default function lifelog() {
         
       </div> */}
           <div className="flex flex-col items-center pt-24 pb-12 shrink-0">
+            
       {/* 新的標題內容 */}
-      <h2 className="text-lg md:text-xl font-medium text-[#B1843D] tracking-[0.3em] opacity-70 pointer-events-none text-center leading-relaxed">
-      ⋆˚꩜｡ 一些我的生活 — 我，我喜歡的，我經歷的，構成我的✮⋆˙
-      </h2>
+      <TextType
+        className="text-lg md:text-xl font-medium text-[#B1843D] tracking-[0.3em] opacity-70 pointer-events-none text-center leading-relaxed"
+        text={[
+          "⋆˚꩜｡ 一些我的生活 — 我，我喜歡的，我經歷的，構成我的✮⋆˙",
+        ]}
+        loop={false}
+        typingSpeed={75}
+        pauseDuration={1500}
+        showCursor
+        cursorCharacter="_"
+        deletingSpeed={50}
+        variableSpeed={{ min: 60, max: 120 }}
+        cursorBlinkDuration={0.5}
+        onSentenceComplete={() => {}}
+      />
       
       {/* 可以加一個極細的小裝飾線，增加 Dreamcore 的精緻感 */}
       <div className="w-8 h-[3px] bg-[#B1843D]/30 mt-6 pointer-events-none mb-20"></div>
@@ -51,13 +75,43 @@ export default function lifelog() {
       {/* ImageTrail 會偵測滑鼠在容器內的移動 */}
       
       
-        <div className="relative flex-grow:1  h-full items-center justify-center">
-          <h1 className="text-2xl font-extrabold text-[#EAD4AD] pointer-events-none text-center">
+        <div className="flex flex-col relative flex-grow:1   items-center justify-center">
+          {/* <h1 className="text-2xl font-extrabold text-[#EAD4AD] pointer-events-none text-center">
             Move Your Mouse
-          </h1>
-          <h1 className="text-6xl font-black text-[#EAD4AD] pointer-events-none text-center">
+          </h1> */}
+            <TextType
+            className="text-6xl font-black text-[#EAD4AD] pointer-events-none text-center"
+            text={[
+              "Move Your Mouse",
+            ]}
+            loop={false}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor
+            cursorCharacter=""
+            deletingSpeed={50}
+            variableSpeed={{ min: 60, max: 120 }}
+            cursorBlinkDuration={0.5}
+            onSentenceComplete={() => {}}
+          />
+          <TextType
+            className="text-6xl font-black text-[#EAD4AD] pointer-events-none text-center"
+            text={[
+              "To See my Lifelogs🥨",
+            ]}
+            loop={false}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor
+            cursorCharacter=""
+            deletingSpeed={50}
+            variableSpeed={{ min: 60, max: 120 }}
+            cursorBlinkDuration={0.5}
+            onSentenceComplete={() => {}}
+          />
+          {/* <h1 className="text-6xl font-black text-[#EAD4AD] pointer-events-none text-center">
             To See my Lifelogs🥨
-          </h1>
+          </h1> */}
         </div>
       </ImageTrail>
       <div className="h-8 shrink-0" />

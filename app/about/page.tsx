@@ -1,8 +1,13 @@
+"use client";
 import { TbBrandAdobeIllustrator } from "react-icons/tb";
 import { TbBrandAdobePhotoshop } from "react-icons/tb";
 import { RiFigmaLine } from "react-icons/ri";
 import { SiBlender } from "react-icons/si";
+import SplitText from "@/components/SplitText";
 
+const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
 
 
 
@@ -18,11 +23,27 @@ export default function About() {
             alt="Profile"
           />
           {/* 2. 中層：你提供的那段「變色咒語」 */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sky-100/10 to-[#FFFEEE] z-10"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-transparent via-sky-100/10 to-[#FFFEEE] z-10"></div>
         </div>
 
         {/* 3. 右側：文字內容（確保在漸層之上） */}
-        <div className="relative z-5 w-1/2 p-8 flex flex-col justify-start">
+        <div className="relative z-20 w-1/2 p-8 flex flex-col justify-start">
+        {/* <SplitText
+          text="Hello, you!"
+          text-black
+          className="text-2xl font-semibold text-center"
+          delay={50}
+          duration={1.25}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="0px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        /> */}
+
           <h1 className="text-5xl font-bold text-[#B1843D]">林芮竫</h1>
           <h2 className="text-2xl font-bold text-[#B1843D] mt-2">ruijing.lin</h2>
           <h3 className="test-ms text-black mt-5">國立政治大學教育學系</h3>
@@ -36,7 +57,7 @@ export default function About() {
 
           <div className="w-full p-2 my-2">
               <div>
-                <h5 className="mt-2 text-xl font-bold flex items-center gap-2 mb-0 text-[#B1843D]">
+                <h5 className="mt-2 text-xl font-bold flex items-center gap-2 mb-0 text-[#B1843D]/70">
                   <span className="w-4 h-4 bg-[#EAD4AD] inline-block"></span>
                   Skills
                 </h5>
@@ -44,19 +65,19 @@ export default function About() {
               </div> 
 
               <div className="group flex gap-3 mt-0">
-              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69]
-                transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer ">
+              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69]/70
+                transition-all duration-300 ease-in-out hover:scale-120 active:scale-80 cursor-pointer ">
                 <TbBrandAdobeIllustrator size={32} className="text-white" />
               </div>
-              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69] transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer ">
+              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69]/70 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer ">
                 <TbBrandAdobePhotoshop  size={32} className="text-white" />
               </div>
-              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69]
-                transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer ">
+              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69]/70
+                transition-all duration-300 ease-in-out hover:scale-120 active:scale-80 cursor-pointer ">
                 <RiFigmaLine  size={32} className="text-white" />
               </div>
-              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69]
-                transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer ">
+              <div className="flex w-14 h-14 rounded-full items-center justify-center bg-[#D4BB69]/70
+                transition-all duration-300 ease-in-out hover:scale-120 active:scale-80 cursor-pointer ">
                 <SiBlender  size={32} className="text-white" />
               </div>
               

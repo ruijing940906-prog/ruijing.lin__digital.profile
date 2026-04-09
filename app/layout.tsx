@@ -54,25 +54,25 @@ export default function RootLayout({
           <div className="flex gap-3 mt-6">
 
           <a href="https://www.instagram.com/ruijing.lin__/" target="_blank" className="group">
-          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300 group-hover:bg-[#FFE89E] ease-in-out hover:scale-105 active:scale-95 cursor-pointer ">
+          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300 group-hover:bg-[#FFE89E] ease-in-out hover:scale-120 active:scale-80 cursor-pointer ">
            <div className="background-size:cover;background-position:center"><RiInstagramFill size={24} className=" style= color: #FFE89E   transition-colors group-hover:text-white " /></div>
            </div>
           </a>
            
           <a href="https://www.facebook.com/ruijing.lin?locale=zh_TW" target="_blank" className="group">
-          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300  group-hover:bg-[#FFE89E] ease-in-out hover:scale-105 active:scale-95 cursor-pointer ">
+          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300  group-hover:bg-[#FFE89E] ease-in-out hover:scale-120 active:scale-80 cursor-pointer ">
            <div className="background-size:cover;background-position:center"><FaFacebook  size={24} className=" style= color: #FFE89E   transition-colors group-hover:text-white " /></div>
            </div>
           </a>
           
           <a href="https://sites.google.com/view/113102026/home" target="_blank" className="group">
-          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300  group-hover:bg-[#FFE89E] ease-in-out hover:scale-105 active:scale-95 cursor-pointer">
+          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300  group-hover:bg-[#FFE89E] ease-in-out hover:scale-120 active:scale-80 cursor-pointer">
            <div className="background-size:cover;background-position:center"><MdOutlineWeb  size={24} className=" style= color: #FFE89E   transition-colors group-hover:text-white " /></div>
            </div>
           </a>
 
           <a href="https://youtube.com/channel/UCUEHrzX445cV6bgtKltcLwQ?si=P0kUu9sXheCHsgS8" target="_blank" className="group">
-          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300  group-hover:bg-[#FFE89E] ease-in-out hover:scale-105 active:scale-95 cursor-pointer ">
+          <div className=" w-[40px] h-[40px] rounded-full flex items-center justify-center bg-[#FFFEEE] transition-all duration-300  group-hover:bg-[#FFE89E] ease-in-out hover:scale-120 active:scale-80 cursor-pointer ">
            <div className="background-size:cover;background-position:center"><FaYoutube   size={24} className=" style= color: #FFE89E   transition-colors group-hover:text-white " /></div>
            </div>
           </a>
