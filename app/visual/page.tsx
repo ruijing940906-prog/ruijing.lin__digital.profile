@@ -64,7 +64,7 @@ export default function Home() {
       </h2> */}
       <header className="mb-10"> {/* 💡 用 mb-10 直接把底下的內容往下推 */}
         <h1 className="text-[32px] font-extrabold text-[#B1843D]">
-          VISUAL DESIGN
+          VISUAL DESIGN˚‧｡⋆
         </h1>
         <h2 className="mt-3 text-lg font-medium text-black tracking-[0.3em] opacity-70 pointer-events-none leading-relaxed">
           一些日常設計創作作品
