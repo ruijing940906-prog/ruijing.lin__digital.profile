@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import SplitText from "@/components/SplitText";
+const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -57,15 +61,29 @@ export default function Home() {
 
 
   return (
-    <div className="w-full h-full px-4 mt-4">
+    <div className="w-full h-full px-4 mt-4  ">
       {/* <div className="text-[32px] font-extrabold text-[#B1843D]">VISUAL DESIGN</div>
       <h2 className="mt-3 text-lg md:text-m font-medium text-black tracking-[0.3em] opacity-70 pointer-events-none leading-relaxed">
      一些累積的設計作品
       </h2> */}
+      <SplitText
+        text="VISUAL DESIGN˚‧｡⋆"
+        className="text-[32px] font-extrabold text-[#B1843D] "
+        delay={50}
+        duration={1.25}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        onLetterAnimationComplete={handleAnimationComplete}
+      />
       <header className="mb-10"> {/* 💡 用 mb-10 直接把底下的內容往下推 */}
-        <h1 className="text-[32px] font-extrabold text-[#B1843D]">
+        {/* <h1 className="text-[32px] font-extrabold text-[#B1843D]">
           VISUAL DESIGN˚‧｡⋆
-        </h1>
+        </h1> */}
         <h2 className="mt-3 text-lg font-medium text-black tracking-[0.3em] opacity-70 pointer-events-none leading-relaxed">
           一些日常設計創作作品
         </h2>

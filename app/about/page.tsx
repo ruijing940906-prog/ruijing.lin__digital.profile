@@ -3,6 +3,7 @@ import { TbBrandAdobeIllustrator } from "react-icons/tb";
 import { TbBrandAdobePhotoshop } from "react-icons/tb";
 import { RiFigmaLine } from "react-icons/ri";
 import { SiBlender } from "react-icons/si";
+
 import SplitText from "@/components/SplitText";
 
 const handleAnimationComplete = () => {
@@ -11,10 +12,11 @@ const handleAnimationComplete = () => {
 
 
 
+
 export default function About() {
   return (
     <>
-      <div className="relative w-full h-full flex rounded-2xl overflow-hidden bg-[#FFFEEE]">
+      <div className="relative w-full h-full flex rounded-2xl overflow-hidden bg-[#FFFEEE] scrollbar-custom">
         {/* 1. 底層：你的照片 */}
         <div className="relative w-1/2 h-full">
           <img
@@ -27,7 +29,7 @@ export default function About() {
         </div>
 
         {/* 3. 右側：文字內容（確保在漸層之上） */}
-        <div className="relative z-20 w-1/2 p-8 flex flex-col justify-start">
+        <div className="relative z-20 w-1/2 p-8 flex flex-col justify-start text-lg md:text-[12px] font-medium text-[#B1843D] tracking-[0.3em] opacity-70 text-left items-start leading-relaxed">
         {/* <SplitText
           text="Hello, you!"
           text-black
@@ -43,11 +45,25 @@ export default function About() {
           textAlign="center"
           onLetterAnimationComplete={handleAnimationComplete}
         /> */}
+        <SplitText
+        text="林芮竫"
+        className="text-5xl text-left font-extrabold text-[#B1843D] "
+        delay={50}
+        duration={1.25}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        onLetterAnimationComplete={handleAnimationComplete}
+      />
 
-          <h1 className="text-5xl font-bold text-[#B1843D]">林芮竫</h1>
+          {/* <h1 className="text-5xl font-bold text-[#B1843D]">林芮竫</h1> */}
           <h2 className="text-2xl font-bold text-[#B1843D] mt-2">ruijing.lin</h2>
           <h3 className="test-ms text-black mt-5">國立政治大學教育學系</h3>
-          <h4 className="test-ms text-black">雙主修數位內容學位學程</h4>
+          <h4 className="test-ms text-black mt-4">雙主修數位內容學位學程</h4>
           <h4 className="test-ms text-black mt-4">—</h4>
           <h5 className="test-ms text-black mt-4">名字很難念的同學</h5>
           <h5 className="test-ms text-black mt-4">慢吞吞挑食怪 彰化人但不吃罵丸</h5>

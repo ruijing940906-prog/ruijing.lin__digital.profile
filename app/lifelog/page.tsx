@@ -39,7 +39,7 @@ const lifelogImages = [
 export default function lifelog() {
   return (
     
-    <div className="relative w-full h-screen overflow-hidden bg-[#FFFEEE]">
+    <div className="relative w-full h-screen overflow-hidden scrollbar-custom bg-[#FFFEEE]">
       <ImageTrail 
         items={lifelogImages}
         variant={1} >

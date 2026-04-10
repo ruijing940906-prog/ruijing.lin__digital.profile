@@ -38,7 +38,7 @@ export default function RootLayout({
 
           {/* 左邊  卡片*/}
           {/* <div className="bg-white w-[300px] h-full  p-4  rounded-2xl flex flex-col items-center overflow-y-auto "> */}
-          <div className="min-w-[320px] w-full sm:w-[320px] h-full rounded-2xl bg-[#FFFEEE] flex justify-start items-center flex-col p-[30px] pt-[30px] overflow-y-auto overflow-x-hidden">
+          <div className="min-w-[320px] w-full sm:w-[320px] h-full rounded-2xl bg-[#FFFEEE] flex justify-start items-center flex-col p-[30px] pt-[30px] overflow-y-auto overflow-x-hidden scrollbar-custom">
           <Link href="/home" className=" w-full mt-2 flex justify-center">
               <div> <Image src="/head.png" alt="image" width={230} height={230} className="rounded-full transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer " /></div>
           </Link>
@@ -83,24 +83,24 @@ export default function RootLayout({
           {/* 下方按鈕 */}
           <div className="w-full px-4 mt-2 ">
             <Link href="/about" className="block w-full mt-6">
-              <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer">ABOUT</div>
+              <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-115 active:scale-85 cursor-pointer">ABOUT</div>
             </Link>
 
             <Link href="/lifelog" className="block w-full mt-6">
-              <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer">LIFELOG</div>
+              <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-115 active:scale-85 cursor-pointer">LIFELOG</div>
             </Link>
             
             <Link href="/visual" className="block w-full mt-6">
-            <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer">VISUAL DESIGN</div>
+            <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-115 active:scale-85 cursor-pointer">VISUAL DESIGN</div>
             </Link>
             
             
             <Link href="/ui" className="block w-full mt-6">
-            <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer">UI DESIGN</div>
+            <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-115 active:scale-85 cursor-pointer">UI DESIGN</div>
             </Link>
 
             <Link href="/3D&motion" className="block w-full mt-6">
-            <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer">3D MOTION</div>
+            <div className="bg-[#F9F2DC] p-[16px] py-8 mt-6 rounded-2xl text-center w-full h-full font-bold transition-all duration-300 ease-in-out hover:scale-115 active:scale-85 cursor-pointer">3D MOTION</div>
             </Link>
 
             <div className="h-8 w-full flex-shrink:0"></div>
@@ -111,7 +111,7 @@ export default function RootLayout({
 
 
         {/* 右邊 */}
-        <div className="flex-1 h-full bg-[#FFFEEE] rounded-[40px] p-12 overflow-y-auto"> 
+        <div className="flex-1 h-full bg-[#FFFEEE] rounded-[40px] p-12 overflow-y-auto scrollbar-custom"> 
            {children}
            </div>
       
