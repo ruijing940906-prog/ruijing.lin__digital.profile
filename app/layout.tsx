@@ -33,14 +33,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-      <div className="w-screen h-screen flex flex-col sm:flex-row   bg-[#EAD4AD] p-6 gap-6 overflow-hidden">
+      <body className=" flex flex-col min-h-screen bg-[#EAD4AD] antialiased">
+      <div className="w-screen h-screen flex flex-col sm:flex-row   bg-[#EAD4AD] p-6 gap-6 sm:overflow-hidden">
 
           {/* 左邊  卡片*/}
           {/* <div className="bg-white w-[300px] h-full  p-4  rounded-2xl flex flex-col items-center overflow-y-auto "> */}
-          <div className="min-w-[320px] w-full sm:w-[320px] h-full rounded-2xl bg-[#FFFEEE] flex justify-start items-center flex-col p-[30px] pt-[30px] overflow-y-auto overflow-x-hidden scrollbar-custom">
+          <div className="sm:w-[320px] sm:min-w-[320px] h-auto sm:h-full
+          min-w-[320px] w-full  rounded-2xl bg-[#FFFEEE] flex justify-start items-center flex-col p-[30px] pt-[30px] overflow-y-auto overflow-x-hidden ">
           <Link href="/home" className=" w-full mt-2 flex justify-center">
-              <div> <Image src="/head.png" alt="image" width={230} height={230} className="rounded-full transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer " /></div>
+              <div className="relative w-[120px] h-[120px] sm:w-[230px] sm:h-[230px]"> <Image src="/head.png" alt="image" width={230} height={230} className="rounded-full transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer " /></div>
           </Link>
             
           
@@ -111,7 +112,7 @@ export default function RootLayout({
 
 
         {/* 右邊 */}
-        <div className="flex-1 h-full bg-[#FFFEEE] rounded-[40px] p-12 overflow-y-auto scrollbar-custom"> 
+        <div className="flex-1 h-full bg-[#FFFEEE] rounded-[40px] p-12 overflow-y-auto overflow-x-hidden"> 
            {children}
            </div>
       

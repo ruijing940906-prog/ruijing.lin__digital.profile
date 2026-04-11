@@ -64,16 +64,57 @@ export default function Home() {
 
 
       {/* 作品內容層 Grid */}
-      <div className="grid grid-cols-12 gap-8 auto-rows-[250px] mt-6">
-      
+      <div className="grid grid-cols-12 gap-8 auto-rows-[350px] mt-6">
+      <div className=" col-span-12 group  transform translate-z-0 isolation-isolate z-0 bg-[#F9F2DC] left-0 py-8  rounded-2xl text-center w-full h-full 
+                         flex  items-center justify-center font-bold transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer
+                        bg-[url(/ui/222.png)] bg-center bg-cover relative overflow-hidden
+        ">
 {/* 
       待處理 問agent */}
-      {/* <div className="sketchfab-embed-wrapper"> <iframe title="NewHW04_113102026" frameBorder="0" allowFullScreen mozallowFullScreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/06e5ac65b51c423fb58b88401bd271cf/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/newhw04-113102026-06e5ac65b51c423fb58b88401bd271cf?utm_medium=embed&utm_campaign=share-popup&utm_content=06e5ac65b51c423fb58b88401bd271cf" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> NewHW04_113102026 </a> by <a href="https://sketchfab.com/ruijing.lin_?utm_medium=embed&utm_campaign=share-popup&utm_content=06e5ac65b51c423fb58b88401bd271cf" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> ruijing.lin_ </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=06e5ac65b51c423fb58b88401bd271cf" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div> */}
+              <div className="sketchfab-embed-wrapper w-full">
+                    <iframe
+                      title="NewHW04_113102026"
+                      src="https://sketchfab.com/models/06e5ac65b51c423fb58b88401bd271cf/embed"
+                      /* 💡 修正：移除 moz 與 webkit 前綴，僅保留標準 allowFullScreen */
+                      allowFullScreen
+                      /* 💡 修正：React 屬性需使用小駝峰，例如 frameBorder */
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; xr-spatial-tracking"
+                      className="w-full h-[450px] rounded-xl"
+                    ></iframe>
+
+                    <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
+                      <a 
+                        href="https://sketchfab.com/3d-models/newhw04-113102026-06e5ac65b51c423fb58b88401bd271cf" 
+                        target="_blank" 
+                        rel="nofollow" 
+                        style={{ fontWeight: 'bold', color: '#1CAAD9' }}
+                      >
+                        NewHW04_113102026
+                      </a>
+                      {" by "}
+                      <a 
+                        href="https://sketchfab.com/ruijing.lin_" 
+                        target="_blank" 
+                        rel="nofollow" 
+                        style={{ fontWeight: 'bold', color: '#1CAAD9' }}
+                      >
+                        ruijing.lin_
+                      </a>
+                      {" on "}
+                      <a href="https://sketchfab.com" target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
+                        Sketchfab
+                      </a>
+                    </p>
+                  </div>
+
+              </div>
+      {/* <div className="sketchfab-embed-wrapper"> <iframe title="NewHW04_113102026" frameBorder="0" allowFullScreen mozallowFullScreen="string"
+webkitallowfullscreen="true"  allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/06e5ac65b51c423fb58b88401bd271cf/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/newhw04-113102026-06e5ac65b51c423fb58b88401bd271cf?utm_medium=embed&utm_campaign=share-popup&utm_content=06e5ac65b51c423fb58b88401bd271cf" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> NewHW04_113102026 </a> by <a href="https://sketchfab.com/ruijing.lin_?utm_medium=embed&utm_campaign=share-popup&utm_content=06e5ac65b51c423fb58b88401bd271cf" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> ruijing.lin_ </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=06e5ac65b51c423fb58b88401bd271cf" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div> */}
 
 
 
-
-      <div className=" col-span-12 group  transform translate-z-0 isolation-isolate z-0 bg-[#F9F2DC] left-0 py-8  rounded-2xl text-center w-full h-full 
+      {/* <div className=" col-span-12 group  transform translate-z-0 isolation-isolate z-0 bg-[#F9F2DC] left-0 py-8  rounded-2xl text-center w-full h-full 
                          flex  items-center justify-center font-bold transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 cursor-pointer
                         bg-[url(/ui/222.png)] bg-center bg-cover relative overflow-hidden
         ">
@@ -84,7 +125,7 @@ export default function Home() {
                               <div className="text-black font-black  text-xl text-center">台北有藝事</div>
                               <div className="text-black font-medium  text-center text-[12px]">整合個人推薦、藝文活動地圖、評價查詢等的一站式藝文平台</div>
                               </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-12 gap-8 auto-rows-[250px] mt-6">
